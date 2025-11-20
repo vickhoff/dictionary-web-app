@@ -58,11 +58,14 @@
     </nav>
     <main>
 
-      <div id="search-field">
-        <input type="text" id="word-search" placeholder="Search for any word...">
-        <button type="submit" id="search-button" aria-label="Search">
-          <img src="./assets/images/icon-search.svg" alt="Search">
-        </button>
+      <div id="search-form">
+        <div class="input-field">
+          <input type="text" id="word-search" placeholder="Search for any word...">
+          <button type="submit" id="search-button" aria-label="Search">
+            <img src="./assets/images/icon-search.svg" alt="Search">
+          </button>
+        </div>
+        <span id="validation-error-message">Whoops, can't be empty…</span>
       </div>
 
       <section id="word-container">
@@ -107,8 +110,6 @@
         
       </div>
       <div id="source-container">
-        <h4 id="source-title">Source</h4>
-        <a id="source-link" href="https://www.example.com" target="_blank">https://www.example.com</a>
       </div>
     </main>
   </div>

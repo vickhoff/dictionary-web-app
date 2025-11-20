@@ -1,15 +1,10 @@
 import { getWord } from "./api.js";
 
 let searchString = "beer";
-
 let wordData = await getWord(searchString);
 
 
-//Change font
-
-
-
-const searchContainer = document.getElementById("search-field");
+const searchForm = document.getElementById("search-form");
 const wordContainer = document.getElementById("word-container");
 const definitionContainer = document.getElementById("definition-container");
 const sourceContainer = document.getElementById("source-container");
@@ -167,16 +162,16 @@ const searchWord = async () => {
 
     //Validate input
     if (searchString === "") {
-        searchContainer.classList.add("validation-error");
+        searchForm.classList.add("validation-error");
         return;
     }
 
     //Remove validation error class
-    searchContainer.classList.remove("validation-error")
+    searchForm.classList.remove("validation-error")
 
     try {
         wordData = await getWord(searchString)
-        searchField.classList.remove("validation-error")
+        searchForm.classList.remove("validation-error")
         updateWord()
         updateMeanings()
         sourceContainer.style.display = "block";
